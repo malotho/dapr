@@ -10,12 +10,14 @@ on:
     branches:
       - master
       - release-*
+      - nkosinathi-*
     tags:
       - v*
   pull_request:
     branches:
       - master
       - release-*
+      - nkosinathi-*
 jobs:
   build:
     name: Build ${{ matrix.target_os }}_${{ matrix.target_arch }} binaries
