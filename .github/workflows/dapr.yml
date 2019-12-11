@@ -10,7 +10,7 @@ on:
     branches:
       - master
       - release-*
-      - nkosinathi
+
   
     tags:
       - v*
