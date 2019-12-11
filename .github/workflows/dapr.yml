@@ -58,7 +58,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
       - name: Parse release version and set REL_VERSION
-        run: python ./.github/scripts/get_release_version.py
+        run: python3.8 ./.github/scripts/get_release_version.py
       - name: Run make lint
         if: matrix.target_arch != 'arm'
         run: make lint
@@ -86,7 +86,7 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
       - name: Parse release version and set REL_VERSION
-        run: python ./.github/scripts/get_release_version.py
+        run: python3.8 ./.github/scripts/get_release_version.py
       - name: download artifacts - dapr_linux_amd64
         uses: actions/download-artifact@master
         with:
